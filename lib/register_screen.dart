@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_ui_flutter/login_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -14,6 +15,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
       backgroundColor: Colors.teal,
       appBar: AppBar(
           backgroundColor: Colors.transparent,
+          leading: GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const LoginScreen()));
+            },
+            child: const Icon(
+              Icons.arrow_back_ios,
+              color: Colors.white,
+            ),
+          ),
           title: const Text(
             "Registration",
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
@@ -36,7 +47,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 shape: const RoundedRectangleBorder(
                     side: BorderSide(color: Colors.white70, width: 1)),
                 foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
               ),
               onPressed: () {},
               child: const Text(
