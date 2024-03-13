@@ -10,50 +10,44 @@ class RegisterScreen extends StatefulWidget {
 class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.teal,
-        appBar: AppBar(
-            backgroundColor: Colors.transparent,
-            title: Text(
-              "Registration",
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-            ),
-            centerTitle: true),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              InputText(hinttext: 'Enter your Name'),
-              InputText(hinttext: 'Enter your roll no'),
-              InputText(hinttext: 'Enter your Email'),
-              InputText(hinttext: 'Enter your Password'),
-
-              SizedBox(
-                height: 30,
-              ),
-              TextButton(
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      side: BorderSide(color: Colors.white70, width: 1)),
-                  foregroundColor: Colors.white,
-                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                ),
-                onPressed: () {},
-                child: Text(
-                  "Register",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ],
+    return Scaffold(
+      backgroundColor: Colors.teal,
+      appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          title: const Text(
+            "Registration",
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
+          centerTitle: true),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const InputText(hinttext: 'Enter your Name'),
+            const InputText(hinttext: 'Enter your roll no'),
+            const InputText(hinttext: 'Enter your Email'),
+            const InputText(hinttext: 'Enter your Password'),
+            const SizedBox(
+              height: 30,
+            ),
+            TextButton(
+              style: ElevatedButton.styleFrom(
+                shape: const RoundedRectangleBorder(
+                    side: BorderSide(color: Colors.white70, width: 1)),
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              ),
+              onPressed: () {},
+              child: const Text(
+                "Register",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ],
         ),
       ),
     );
-    ;
   }
 }
 
@@ -68,16 +62,16 @@ class InputText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: TextField(
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.white, width: 1),
+            borderSide: const BorderSide(color: Colors.white, width: 1),
             borderRadius: BorderRadius.circular(6),
           ),
           hintText: hinttext,
-          hintStyle: TextStyle(color: Colors.white70),
-          contentPadding: EdgeInsetsDirectional.all(19.0),
+          hintStyle: const TextStyle(color: Colors.white70),
+          contentPadding: const EdgeInsetsDirectional.all(19.0),
         ),
       ),
     );

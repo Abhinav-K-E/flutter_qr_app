@@ -50,7 +50,7 @@ class _QrScreenState extends State<QrScreen> {
             onPressed: () {},
             child: Text(
               "Scan",
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.white, fontSize: 24),
             ),
           ),
         ],
