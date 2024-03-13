@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_ui_flutter/qr_screen.dart';
 import 'package:login_ui_flutter/register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -62,7 +63,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 foregroundColor: Colors.white,
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const QrScreen()));
+              },
               child: Text(
                 "Login",
                 style: TextStyle(
@@ -74,9 +78,10 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(height: 20),
             TextButton(
                 onPressed: () {
-                  Navigator.push(context, 
-                  MaterialPageRoute(builder: (context)=>const RegisterScreen())
-                  );
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const RegisterScreen()));
                 },
                 child: Text(
                   "Don't have an account? Register",

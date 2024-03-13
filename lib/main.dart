@@ -15,6 +15,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: LoginScreen());
+    return const SafeArea(
+        child: MaterialApp(
+            debugShowCheckedModeBanner: false, home: LoginScreen()));
   }
 }
