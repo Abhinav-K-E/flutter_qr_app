@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_ui_flutter/scan_screen.dart';
 // QR Flutter package
 import 'package:qr_flutter/qr_flutter.dart';
 
@@ -47,7 +48,10 @@ class _QrScreenState extends State<QrScreen> {
               foregroundColor: Colors.white,
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const ScanScreen()));
+            },
             child: Text(
               "Scan",
               style: TextStyle(color: Colors.white, fontSize: 24),
