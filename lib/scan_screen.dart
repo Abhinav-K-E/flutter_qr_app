@@ -6,19 +6,23 @@ class ScanScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.teal,
-      alignment: Alignment.center,
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
-        ),
-        width: 300,
-        height: 300,
-        child: MobileScanner(
-          fit: BoxFit.cover,
-          allowDuplicates: false,
-          onDetect: (barcode, argu) {},
+    return Scaffold(
+      body: Container(
+        color: Colors.teal,
+        alignment: Alignment.center,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30),
+          ),
+          width: 300,
+          height: 300,
+          child: MobileScanner(
+            fit: BoxFit.cover,
+            allowDuplicates: false,
+            onDetect: (barcode, argu) {
+              print(barcode.rawValue);
+            },
+          ),
         ),
       ),
     );
