@@ -15,6 +15,8 @@ class Profile_Screen extends StatelessWidget {
             CircleAvatar(
               radius: 80,
               backgroundColor: Colors.white,
+              backgroundImage:
+                  NetworkImage('https://picsum.photos/seed/picsum/200/300'),
             ),
             Container(
               padding: EdgeInsets.symmetric(vertical: 10),
@@ -39,7 +41,7 @@ class Profile_Screen extends StatelessWidget {
               margin: EdgeInsets.only(top: 10),
               width: 140,
               height: 2,
-              color: Color.fromARGB(255, 189, 189, 189),
+              color: Color.fromARGB(145, 189, 189, 189),
             ),
             Container(
               padding: EdgeInsets.all(20),
