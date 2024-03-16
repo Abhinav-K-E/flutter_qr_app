@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:login_ui_flutter/login_screen.dart';
-import 'package:login_ui_flutter/profile_screen.dart';
+import 'package:login_ui_flutter/login_screen.dart';
+// import 'package:login_ui_flutter/profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +18,6 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return const SafeArea(
         child: MaterialApp(
-            debugShowCheckedModeBanner: false, home: Profile_Screen()));
+            debugShowCheckedModeBanner: false, home: LoginScreen()));
   }
 }
