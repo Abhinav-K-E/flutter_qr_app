@@ -4,7 +4,8 @@ import 'package:login_ui_flutter/scan_screen.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
 class QrScreen extends StatefulWidget {
-  const QrScreen({super.key});
+  final String rollno;
+  const QrScreen({super.key, required this.rollno});
 
   @override
   State<QrScreen> createState() => _QrScreenState();
@@ -35,7 +36,7 @@ class _QrScreenState extends State<QrScreen> {
           ),
           Container(
             child: QrImageView(
-              data: 'https://abhinav-k-e.github.io',
+              data: widget.rollno,
               version: QrVersions.auto,
               size: 200.0,
               foregroundColor: Colors.white,
